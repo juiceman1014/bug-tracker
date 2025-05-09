@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BugService, BugReport } from '../../services/bug.service';
 
 @Component({
   selector: 'app-bug-list',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './bug-list.component.html',
-  styleUrl: './bug-list.component.css'
+  styleUrls: ['./bug-list.component.css']
 })
 export class BugListComponent implements OnInit{
   bugReports: BugReport[] = [];
