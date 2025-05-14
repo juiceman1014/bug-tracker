@@ -21,4 +21,8 @@ export class BugService {
   getBugs(): Observable<BugReport[]> {
     return this.http.get<BugReport[]>(this.apiUrl);
   }
+
+  createBug(bug: BugReport): Observable<BugReport> {
+    return this.http.post<BugReport>(this.apiUrl, bug);
+  }
 }
