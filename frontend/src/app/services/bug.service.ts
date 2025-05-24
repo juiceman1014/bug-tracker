@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environment/environment';
 
 export interface BugReport{
   id: number;
@@ -14,7 +15,7 @@ export interface BugReport{
   providedIn: 'root'
 })
 export class BugService {
-  private apiUrl = 'http://localhost:5127/api/bugreports';
+  private apiUrl = `${environment.apiUrl}/api/bugreports`;
 
   constructor(private http: HttpClient) { }
 
