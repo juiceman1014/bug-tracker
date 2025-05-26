@@ -15,7 +15,8 @@ export interface BugReport{
   providedIn: 'root'
 })
 export class BugService {
-  private apiUrl = `${environment.apiUrl}/api/bugreports`;
+  private apiUrl = `${environment.apiUrl}/bugreports`;
+  //private apiUrl = 'http://localhost:5127/api/bugreports';
 
   constructor(private http: HttpClient) { }
 
