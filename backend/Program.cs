@@ -28,4 +28,8 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-app.Run();
+//for docker
+app.Run("http://0.0.0.0:80");
+
+//to run locally
+//app.Run();
